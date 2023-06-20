@@ -6,6 +6,7 @@ import { warning } from './warning/warning.component';
 import { SuccessComponent } from './success/success.component';
 import {name} from "./name/name.component";
 import { AgeComponent } from './age/age.component'
+import { Assignment } from './assignment/assignment.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { AgeComponent } from './age/age.component'
     warning,
     SuccessComponent,
     name,
-    AgeComponent
+    AgeComponent,
+    Assignment
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./age.component.css']
 })
 export class AgeComponent {
-  age: number = 23;
+  private age: number;
+  constructor() {
+    this.age = Math.floor(Math.random() * 20 + 1)
+  }
   getAge() {
     return this.age;
   }

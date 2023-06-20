@@ -1,0 +1,12 @@
+<button class="btn btn-primary" (click)="logging()">Dsiplay Details</button>
+<h3 *ngIf="display">Welcome to my Website using Angular</h3>
+<p *ngIf="!display">Hidden</p>
+
+<!-- <ul>
+  <li *ngFor="let x of log">{{x}}</li>
+</ul> -->
+<p
+  [ngStyle]="{backgroundColor:i>=4?'blue':''}"
+  *ngFor="let x of log;let i = index"
+  [ngClass]="{'white':i>=4}"
+  >{{x}}</p>

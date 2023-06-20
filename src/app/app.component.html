@@ -1,16 +1,22 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
+     <app-assignment></app-assignment>
+      <!-- <app-name></app-name>
       <app-name></app-name>
+      <app-name></app-name>
+      <app-name></app-name>
+ -->
+<!--
       <input type="text" class="form-control" [(ngModel)]="newInfo">
-
       <button class="btn btn-primary" [disabled]="!allowNew" (click)="onAddInfo()"> Add Info </button>
-      <p>{{result}}</p>
+      <p *ngIf="buttonClicked">Button clicked and the added info is: {{result[result.length-1]}}</p>
+      <p *ngFor="let x of result">{{x}}</p>
       <hr>
 
       <input type="text" [(ngModel)]="username" class="form-control">
       <p>{{username}}</p>
-      <button class="btn btn-danger" [disabled]="username===''" (click)="onUserName()">Delete</button>
+      <button class="btn btn-danger" [disabled]="username===''" (click)="onUserName()">Delete</button> -->
 
     </div>
   </div>

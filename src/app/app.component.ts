@@ -9,16 +9,18 @@ import { Component } from '@angular/core';
 export class AppComponent {
   name = "salah";
   allowNew = false;
-  result = '';
+  result: string[] = ['first info'];
   newInfo = '';
   username = '';
+  buttonClicked = false;
   constructor() {
     setTimeout(() => {
       this.allowNew = true;
     }, 3000)
   }
   onAddInfo() {
-    this.result = 'New Info Added Successfully ' + this.newInfo;
+    this.buttonClicked = true;
+    this.result.push(this.newInfo);
   }
   onUserName() {
     this.username = '';
