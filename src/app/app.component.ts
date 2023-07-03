@@ -5,24 +5,24 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
 export class AppComponent {
-  name = "salah";
-  allowNew = false;
-  result: string[] = ['first info'];
-  newInfo = '';
-  username = '';
-  buttonClicked = false;
-  constructor() {
-    setTimeout(() => {
-      this.allowNew = true;
-    }, 3000)
+
+  serverElements = [{ type: 'server', name: "Salah", content: "Test server by salah" }];
+
+
+  onAddServer(serverData: { name: string, content: string }) {
+    this.serverElements.push({
+      type: 'server',
+      name: serverData.name,
+      content: serverData.content
+    });
   }
-  onAddInfo() {
-    this.buttonClicked = true;
-    this.result.push(this.newInfo);
-  }
-  onUserName() {
-    this.username = '';
+
+  onAddBlueprint(serverData: { name: string, content: string }) {
+    this.serverElements.push({
+      type: 'blueprint',
+      name: serverData.name,
+      content: serverData.content
+    });
   }
 }
